@@ -13,6 +13,11 @@ public record Cat
         Name = name;
         Health = health;
     }
+
+    ~Cat()
+    {
+        Console.WriteLine("destructor");
+    }
     private int _health;
     public int Id { get; set; }
     public string Name { get; set; }
@@ -27,3 +32,4 @@ public record Cat
     }
     public event EventHandler<int> OnHealthChanged;
 }
+
